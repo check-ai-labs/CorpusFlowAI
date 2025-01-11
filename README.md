@@ -1,7 +1,7 @@
 # CorpusFlow
 
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
-![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
+![Python Versions](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)
 <!-- ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) -->
 
 CorpusFlow is a robust Python framework designed to streamline the process of gathering training data for Large Language Models. It provides a unified interface to harvest documents from multiple sources while maintaining provenance and metadata, making it an essential tool for ML teams building training pipelines.
