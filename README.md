@@ -1,18 +1,18 @@
 # CorpusFlow
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+<!-- ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) -->
 
 CorpusFlow is a robust Python framework designed to streamline the process of gathering training data for Large Language Models. It provides a unified interface to harvest documents from multiple sources while maintaining provenance and metadata, making it an essential tool for ML teams building training pipelines.
 
 ## 🚀 Key Features
 
 - **Universal Document Access**: Seamlessly connect to multiple document sources:
-  - Google Workspace (Docs, Sheets, Drive)
-  - Microsoft Office 365
-  - Amazon S3
   - Local File Systems
+  - Google Workspace (Docs, Sheets, Drive)
+  - Microsoft Office 365 (comming soon)
+  - Amazon S3 (comming soon)
   - *Easily extensible for additional sources*
 
 - **Smart Document Processing**:
@@ -37,13 +37,13 @@ CorpusFlow is a robust Python framework designed to streamline the process of ga
 ## 🔧 Installation
 
 ```bash
-pip install corpusflow
+pip install corpusflowai
 ```
 
 For development installation:
 
 ```bash
-git clone https://github.com/yourusername/corpusflow.git
+git clone github.com:check-ai-labs/CorpusFlow.git
 cd corpusflow
 pip install -e ".[dev]"
 ```
@@ -59,18 +59,11 @@ doc_manager = DocumentManager()
 
 # Add document sources
 local_source = LocalFileSystemSource("/path/to/documents")
-gdocs_source = GoogleDocsSource()
 
 doc_manager.add_source("local", local_source)
-doc_manager.add_source("gdocs", gdocs_source)
 
 # Connect to sources
 doc_manager.connect_source("local", {})
-doc_manager.connect_source("gdocs", {
-    "client_id": "your-client-id",
-    "client_secret": "your-client-secret",
-    "refresh_token": "your-refresh-token"
-})
 
 # List all documents
 all_docs = doc_manager.list_all_documents()
@@ -125,7 +118,7 @@ sources:
     bucket: training-data
 ```
 
-## 🔄 Processing Pipeline
+## 🔄 Comming SOON  Processing Pipeline
 
 CorpusFlow supports custom processing pipelines through middleware:
 
@@ -158,7 +151,7 @@ CorpusFlow supports multiple authentication methods:
 - API keys
 - Custom authentication handlers
 
-## 📊 Monitoring and Logging
+## 📊 Comming SOON Monitoring and Logging
 
 Built-in support for monitoring and logging:
 
